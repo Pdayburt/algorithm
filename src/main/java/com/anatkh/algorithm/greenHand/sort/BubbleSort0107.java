@@ -9,7 +9,7 @@ public class BubbleSort0107 {
         SelectSort0107.printArr(arr);
     }
 
-    private static void bubbleSort(int[] arr) {
+    public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length <2) return;
         int N = arr.length;
         for (int n = N-1; n >= 0; n--) {
