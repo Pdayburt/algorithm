@@ -1,4 +1,4 @@
-package com.anatkh.algorithm.sort;
+package com.anatkh.algorithm.greenHand.sort;
 
 public class SelectSort0107 {
     public static void main(String[] args) {

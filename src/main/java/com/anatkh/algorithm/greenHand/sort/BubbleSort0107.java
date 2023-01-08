@@ -1,15 +1,12 @@
-package com.anatkh.algorithm.sort;
-
-import static com.anatkh.algorithm.sort.SelectSort0107.printArr;
-import static com.anatkh.algorithm.sort.SelectSort0107.swapArr;
+package com.anatkh.algorithm.greenHand.sort;
 
 public class BubbleSort0107 {
 
     public static void main(String[] args) {
         int[] arr = {33,2,44,1,999,7,6,33,24,65,5687,87,78};
-        printArr(arr);
+        SelectSort0107.printArr(arr);
         bubbleSort(arr);
-        printArr(arr);
+        SelectSort0107.printArr(arr);
     }
 
     private static void bubbleSort(int[] arr) {
@@ -17,7 +14,7 @@ public class BubbleSort0107 {
         int N = arr.length;
         for (int n = N-1; n >= 0; n--) {
             for (int i = 1; i <= n; i++) {
-                if (arr[i-1]>arr[i]) swapArr(arr,i,i-1);
+                if (arr[i-1]>arr[i]) SelectSort0107.swapArr(arr,i,i-1);
             }
         }
 //        int arrLength = arr.length;

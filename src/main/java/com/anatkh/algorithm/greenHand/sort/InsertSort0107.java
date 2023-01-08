@@ -1,14 +1,11 @@
-package com.anatkh.algorithm.sort;
-
-import static com.anatkh.algorithm.sort.SelectSort0107.printArr;
-import static com.anatkh.algorithm.sort.SelectSort0107.swapArr;
+package com.anatkh.algorithm.greenHand.sort;
 
 public class InsertSort0107 {
     public static void main(String[] args) {
         int[] arr = {6,4,11,34,555,887,666,1111,43,1,0};
-        printArr(arr);
+        SelectSort0107.printArr(arr);
         insertSortSecond(arr);
-        printArr(arr);
+        SelectSort0107.printArr(arr);
     }
 
     private static void insertSortSecond(int[] arr) {
@@ -16,7 +13,7 @@ public class InsertSort0107 {
         int N = arr.length;
         for (int end = 1; end < N; end++) {
             for (int pre = end - 1; pre>=0 && arr[pre]>arr[pre+1] ; pre--) {
-                swapArr(arr,pre,pre+1);
+                SelectSort0107.swapArr(arr,pre,pre+1);
             }
         }
     }
@@ -27,7 +24,7 @@ public class InsertSort0107 {
         for (int end = 1; end < N; end++) {
             int newNumIndex = end;
             while (newNumIndex - 1>= 0 && arr[newNumIndex] < arr[newNumIndex-1]) {
-                swapArr(arr,newNumIndex,newNumIndex-1);
+                SelectSort0107.swapArr(arr,newNumIndex,newNumIndex-1);
                 newNumIndex--;
             }
         }
