@@ -1,12 +1,9 @@
 package com.anatkh.algorithm.greenHand.random;
 
 
-import static com.anatkh.algorithm.greenHand.sort.BubbleSort0107.bubbleSort;
-
 public class Comparator0108 {
     public static void main(String[] args) {
         int[] ints = randomLengthRandomValue(10, 100);
-        bubbleSort(ints);
 
     }
 
