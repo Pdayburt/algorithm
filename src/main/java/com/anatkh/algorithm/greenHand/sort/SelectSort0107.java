@@ -8,7 +8,7 @@ public class SelectSort0107 {
         printArr(arr);
     }
 
-    static void printArr(int[] arr) {
+    public static void printArr(int[] arr) {
         for (int i : arr) {
             System.out.print(i+" ");
         }
@@ -23,20 +23,9 @@ public class SelectSort0107 {
             for (int j = minValueIndex + 1; j < N; j++) minValueIndex = arr[minValueIndex] < arr[j]?minValueIndex:j;
             if (minValueIndex != i) swapArr(arr,minValueIndex,i);
         }
-
-//        int arrLength = arr.length;
-//        for (int i = 0; i < arrLength; i++) {
-//            int minValueIndex = i;
-//            for (int j = i+1; j < arrLength; j++) {
-//                minValueIndex = arr[minValueIndex] < arr[j]?minValueIndex:j;
-//            }
-//            if (minValueIndex != i) {
-//                swapArr(arr,i,minValueIndex);
-//            }
-//        }
     }
 
-     static void swapArr(int[] arr, int i, int minValueIndex) {
+     public static void swapArr(int[] arr, int i, int minValueIndex) {
         int temp = arr[i];
         arr[i] = arr[minValueIndex];
         arr[minValueIndex] = temp;
