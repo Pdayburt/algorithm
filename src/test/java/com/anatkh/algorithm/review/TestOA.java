@@ -1,4 +1,4 @@
-package com.anatkh.algorithm;
+package com.anatkh.algorithm.review;
 
 import com.anatkh.algorithm.greenHand.ArrGenerate;
 import com.anatkh.algorithm.greenHand.ArrPrint;

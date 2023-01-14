@@ -1,4 +1,4 @@
-package com.anatkh.algorithm;
+package com.anatkh.algorithm.review;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
