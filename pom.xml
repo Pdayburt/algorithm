@@ -11,12 +11,33 @@
     <groupId>com.anatkh</groupId>
     <artifactId>algorithm</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>algorithm</name>
     <description>algorithm</description>
-
+    <modules>
+        <module>testMaven</module>
+    </modules>
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>pro_env</id>
+            <properties>
+                <jdbc.url>pro_env:3306/pro</jdbc.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev_env</id>
+            <properties>
+                <jdbc.url>dev_env:3306/dev</jdbc.url>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
@@ -38,6 +59,12 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
